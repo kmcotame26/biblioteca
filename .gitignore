@@ -1,0 +1,13 @@
+# Entornos virtuales
+.venv/
+.venv1/
+
+# Archivos temporales de Python
+__pycache__/
+*.pyc
+
+# Configuración local de PyCharm
+.idea/
+
+# Bases de datos o archivos locales
+*.db
