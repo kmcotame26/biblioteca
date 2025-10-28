@@ -1,10 +1,8 @@
 from sqlmodel import SQLModel, Field, Relationship
 from typing import Optional, List
 
-class Usuario(SQLModel, table=True):
+class Genero(SQLModel, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)
     nombre: str
-    correo: str
-    telefono: str
 
-    prestamos: List["Prestamo"] = Relationship(back_populates="usuario")
+    libros: List["Libro"] = Relationship(back_populates="genero")

@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlmodel import Session, select
 from database import get_session
-from modelos.mod_editorial import Editorial
+from modelos.mod_editoral import Editorial
 from typing import List
 
 router = APIRouter(prefix="/editoriales", tags=["Editoriales"])
