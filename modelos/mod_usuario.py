@@ -1,6 +1,6 @@
 from sqlmodel import SQLModel, Field, Relationship
 from typing import Optional, List
-
+from .mod_prestamo import Prestamo
 class Usuario(SQLModel, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)
     nombre: str
@@ -10,5 +10,3 @@ class Usuario(SQLModel, table=True):
     prestamos: List["Prestamo"] = Relationship(back_populates="usuario")
 
 
-# Import diferido para evitar referencia circular
-from .mod_prestamo import Prestamo

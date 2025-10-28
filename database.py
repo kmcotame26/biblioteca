@@ -8,5 +8,5 @@ def get_session():
         yield session
 
 def init_db():
-    from modelos import mod_autor, mod_libro, mod_editorial, mod_genero, mod_usuario, mod_prestamo
+    from modelos import mod_autor, mod_libro, mod_editoral, mod_genero, mod_usuario, mod_prestamo
     SQLModel.metadata.create_all(engine)
