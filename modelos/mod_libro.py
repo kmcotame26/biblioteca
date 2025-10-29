@@ -12,8 +12,7 @@ class Libro(SQLModel, table=True):
     editorial_id: Optional[int] = Field(default=None, foreign_key="editorial.id")
     genero_id: Optional[int] = Field(default=None, foreign_key="genero.id")
 
-    # Relaciones
-    autores: List["Autor"] = Relationship(back_populates="libros", link_model=LibroAutorLink)
-    editorial: Optional["Editorial"] = Relationship(back_populates="libros")
-    genero: Optional["Genero"] = Relationship(back_populates="libros")
+    autor = Relationship(back_populates="libros")
+    editorial = Relationship(back_populates="libros")
+    genero = Relationship(back_populates="libros")
     prestamos: List["Prestamo"] = Relationship(back_populates="libro")

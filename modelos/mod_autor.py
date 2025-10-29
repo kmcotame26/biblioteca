@@ -11,5 +11,4 @@ class Autor(SQLModel, table=True):
     pais_origen: str
     ano_nacimiento: int
 
-    # Relación muchos a muchos con Libro
-    libros: List["Libro"] = Relationship(back_populates="autores", link_model=LibroAutorLink)
+    libros: List["Libro"] = Relationship(back_populates="autor")
